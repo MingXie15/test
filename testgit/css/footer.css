@@ -1,0 +1,48 @@
+body{
+	font-family: Aria;
+}
+.footer-row {
+	margin: 105px 0;
+	position: relative;
+	z-index: 0;
+}
+
+.footer p {
+	font-family: Aria;
+	font-weight: 100;
+	color: #626262;
+	font-size: 16px;
+	text-align: center;
+	margin-bottom: 35px;
+}
+
+.footer-icons {
+	margin-bottom: 35px;
+	padding: 0;
+}
+
+.footer-icons p {
+	text-align: center;
+	font-family: Aria;
+}
+
+.footer-icons img {
+	margin: 0 20px;
+}
+
+.footer-text-small {
+	font-family: Aria;
+	font-weight: 100;
+	color: #a2a2a2;
+	text-align: center;
+	font-size: 15px;
+}
+
+@media (max-width: 768px) {
+	.footer-row {
+		margin-top: 50px;
+	}
+	.footer p ,.footer-text-small{
+		font-size: 14px;
+	}
+}

@@ -1,0 +1,115 @@
+.container>.text-center{
+	margin-top: 100px;
+}
+.overview-hr{
+	margin-top: 40px;
+}
+.overview{
+	margin-top: 200px;
+}
+.overview-content-1 {
+	margin-top: 50px;
+}
+.overview-content-1 p {
+	margin-bottom: 40px;
+}
+.userPsychology{
+	margin-top: 190px;
+}
+.userPsychology-content-1{
+	margin-top: 100px;
+}
+.userPsychology-content-1 img {
+	margin-top: 80px;
+}
+.userPsychology-content-2{
+	margin-top: 90px;
+}
+.userPsychology-content-2 img{
+	margin-top: 70px;
+}
+.userPsychology-content-3{
+	margin-top: 80px;
+}
+.colorChoice{
+	margin-top: 140px;
+}
+.colorChoice-content-1{
+	margin-top: 60px;
+}
+.colorChoice-content-1 img{
+	margin-top: 63px;
+}
+.colorChoice-content-2{
+	margin-top: 70px;
+}
+.colorChoice-content-2 img{
+	margin-top: 70px;
+}
+.strategies{
+	margin-top: 180px;
+}
+.strategies-content-1{
+	margin-top: 60px;
+}
+.strategies-content-1 img{
+	margin-top: 100px;
+}
+.comfortableness{
+	margin-top: 150px;
+}
+.comfortableness-content-1{
+	margin-top: 75px;
+}
+.comfortableness-content-1 img{
+	margin-top: 70px;
+}
+.comfortableness-content-2{
+	margin-top: 70px;
+}
+.comfortableness-content-2 img{
+	margin-top: 70px;
+}
+.comfortableness-content-3{
+	margin-top: 70px;
+}
+.comfortableness-content-3 img{
+	margin-top: 70px;
+}
+.conclusion{
+	margin-top: 150px;
+}
+.conclusion-content-1{
+	margin-top: 70px;
+}
+.reference{
+	margin-top: 150px;
+}
+.reference-title{
+	font-size:23px;
+	margin-bottom:50px;
+}
+.reference-content-1{
+	margin-top: 70px;
+}
+.reference-content-1 p{
+	margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+	.reference-title{
+		font-size: 20px !important;
+	}
+	.reference-content-1 p{
+		text-align: left;
+	}
+	#overview,
+	#userPsychology,
+	#colorChoice,
+	#strategies,
+	#comfortableness,
+	#conclusion,
+	#reference,
+	.overview-content-3 {
+		margin-top: 50px;
+	}
+}

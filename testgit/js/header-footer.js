@@ -5,11 +5,12 @@ $(document).scroll(function() {
 		$('.top-nav').removeClass('top-nav-aniamte');
 	}
 })
+console.log($(window).width())
 $(document).ready(function() {
-	$('.configHeader').load('header.html',function(){
+	$('.configHeader').load('header.html', function() {
 		var active = $(this).attr('data-active')
-		if(active){
-			$(this).find('.'+active).addClass('active').siblings().removeClass('active');
+		if (active) {
+			$(this).find('.' + active).addClass('active').siblings().removeClass('active');
 		}
 	});
 	$('.configFoot').load('footer.html');

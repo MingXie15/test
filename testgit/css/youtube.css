@@ -1,3 +1,6 @@
+.overview{
+	margin-top: 50px;
+}
 .overview-content-1 {
 	margin-top: 50px;
 }
@@ -20,7 +23,9 @@
 	width: 100%;
 	left: 0;
 }
-
+.container .overview-content-3-bg img{
+	margin-top: 0;
+}
 .problemFinding {
 	margin-top: 120px;
 }

@@ -13,7 +13,9 @@
 .overview-content-2 {
 	margin-top: 190px;
 }
-
+.container .overview-content-2 .text-center img{
+	margin-top: 0;
+}
 .overview-content-2 .text-center {
 	margin-top: 70px;
 	min-height: 190px;
@@ -69,7 +71,20 @@
 	border-radius: 50px;
 	margin: 80px auto 0 auto;
 }
-
+.more-btn{
+	/* width: 312px; */
+	/* height: 84px; */
+	padding: 30px 70px;
+	display: inline-block;
+	/* line-height: 84px; */
+	font-size: 24px;
+	box-shadow: 0 0 7px 5px #d2d2d2;
+	border-radius: 50px;
+	text-align: center;
+	font-family: Skia;
+	transition: .5s;
+	margin-top: 100px;
+}
 .design-content-7-btn h4 {
 	margin-top: 25px;
 	width: 550px;
@@ -92,6 +107,10 @@
 }
 
 @media (min-width: 768px) {
+	.more-btn:hover{
+		box-shadow: 0 2px 15px 5px #d2d2d2;
+		transform:translateY(-10px);
+	}
 	.overview-content-3 {
 		padding-bottom: 40%;
 	}
@@ -124,8 +143,22 @@
 	.overview-content-2 .text-center p,.overview-content-4 p,.design-content-7 p{
 		text-align: left;
 	}
+	.more-btn{
+		padding: 15px 35px;
+		display: inline-block;
+		font-size: 22px;
+		box-shadow: 0 0 7px 5px #d2d2d2;
+		border-radius: 30px;
+		text-align: center;
+		font-family: Skia;
+		transition: .5s;
+		margin-top: 20px;
+	}
 	.container {
 		margin-top: 200px !important;
+	}
+	.container>.text-center>img{
+		margin-top: 0 !important;
 	}
 	#overview,
 	#design,

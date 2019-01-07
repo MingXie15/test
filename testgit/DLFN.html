@@ -26,7 +26,7 @@
 			</ul>
 		</div>
 		<div class="container">
-			<div class="text-center"><img src="img/DLFN/DLFN-slide.png" width="90%"></div>
+			<div class="text-center"><img src="img/DLFN/DLFN-slide.png" width="90%" style="margin-top: 0;"></div>
 			<div class="overview" id="overview">
 				<h1 class="overview-title">
 					Overview
@@ -129,7 +129,7 @@
 							provide companionship in various ways to combat feelings of loneliness</span>.</p>
 					<div class="text-center">
 						<img src="img/DLFN/6@2x.png">
-						<img src="img/DLFN/7@2x.png" style="margin-top: 100px;">
+						<img src="img/DLFN/7@2x.png">
 					</div>
 				</div>
 				<div class="research-content-4">
@@ -184,7 +184,7 @@
 						this app. We encourage senior people to using voice message as the major way of requesting services. By
 						following the simple and straight forward user flow they can get help in seconds.</p>
 					<div class="text-center"><img src="img/DLFN/11@2x.png">
-						<img src="img/DLFN/12@2x.png" style="margin-top: 50px;" width="100%"></div>
+						<img src="img/DLFN/12@2x.png" width="100%"></div>
 				</div>
 				<div class="design-content-3">
 					<h3>Sketches & Wireframing</h3>
@@ -197,8 +197,8 @@
 						need to make too many decisions. After skeching, we started wireframing the interfaces follow the user-flow.
 						After that, we got the basic whole-picture of this app.</p>
 					<div class="text-center">
-						<img src="img/DLFN/13@2x.png" style="margin-top: 30px;">
-						<img src="img/DLFN/14@2x.png" style="margin-top: 30px;">
+						<img src="img/DLFN/13@2x.png">
+						<img src="img/DLFN/14@2x.png">
 					</div>
 				</div>
 				<div class="design-content-4">
@@ -211,8 +211,8 @@
 						we can bring our products into next level.
 					</p>
 					<div class="text-center">
-						<img src="img/DLFN/15@2x.png" style="margin-top: 50px;">
-						<img src="img/DLFN/16@2x.png" style="margin-top: 30px;">
+						<img src="img/DLFN/15@2x.png">
+						<img src="img/DLFN/16@2x.png">
 					</div>
 				</div>
 				<div class="design-content-5">
@@ -222,9 +222,9 @@
 						for seniors.”<br /><br />
 						“The process of posting a job is a little bit <br />
 						confusing and misleading.”</p>
-					<div class="text-center"><img src="img/DLFN/17@2x.png" width="90%">
-						<img src="img/DLFN/18@2x.png" style="margin-top: 80px;">
-						<img src="img/DLFN/19@2x.png" style="margin-top: 40px;"></div>
+					<div class="text-center"><img src="img/DLFN/17@2x.png" width="90%" style="margin-top: 0;">
+						<img src="img/DLFN/18@2x.png">
+						<img src="img/DLFN/19@2x.png"></div>
 				</div>
 				<div class="design-content-6">
 					<h3>Styling & Polishing</h3>
@@ -237,9 +237,9 @@
 						distraction as possible for seniors. <span>Too much unnecessary color in design may make them feel stressful</span>.
 					</p>
 					<div class="text-center">
-						<img src="img/DLFN/20@2x.png" style="margin-top: 50px;" />
-						<img src="img/DLFN/21@2x.png" style="margin-top: 50px;" />
-						<img src="img/DLFN/22@2x.png" style="margin-top: 50px;" />
+						<img src="img/DLFN/20@2x.png" />
+						<img src="img/DLFN/21@2x.png" />
+						<img src="img/DLFN/22@2x.png" />
 					</div>
 				</div>
 				<div class="design-content-7">
@@ -282,11 +282,11 @@
 						user testing. We pointed out some possible issues remained and planned to make some future testing to make
 						sure our guessing is correct.</p>
 					<div class="text-center">
-						<img src="img/DLFN/27@2x.png" style="margin-top: 25px;">
+						<img src="img/DLFN/27@2x.png">
 					</div>
 				</div>
 				<div class="myTakeaway-content-2 text-center">
-					<img src="img/DLFN/28@2x.png" style="margin-top: 200px;">
+					<img src="img/DLFN/28@2x.png">
 					<h1 class="overview-title">Thanks for reading !</h1>
 				</div>
 			</div>
@@ -297,6 +297,7 @@
 	</body>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/header-footer.js"></script>
+	<script src="js/adnimate.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('.bottom-nav-list').load('bottomNav.html', function() {
@@ -332,7 +333,6 @@
 				} else {
 					$('.scrollTop').fadeIn();
 				}
-
 				function scrollActive(div) {
 					return $(div).height() + $(div).offset().top
 				}

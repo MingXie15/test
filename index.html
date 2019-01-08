@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>首页</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+		 crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/header.css" />
+		<link rel="stylesheet" type="text/css" href="css/footer.css" />
+		<style>
+			.container-adb {
+				width: 100%;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				height: 100%;
+				/* overflow: hidden; */
+				transition: ease .5s;
+				z-index: 1000;
+			}
+
+			.container-relative {
+				position: inherit;
+			}
+
+			.top-nav {
+				position: relative;
+			}
+
+			.top-yellow {
+				background-color: #fcca3a;
+				height: 100%;
+				display: flex;
+				align-items: center;
+			}
+
+			.column {
+				display: flex;
+				flex-direction: column;
+				transition: ease .5s;
+				transform: translateX(-550%);
+				margin-top: -10%;
+			}
+
+			.animate-top-left {
+				transform: translateX(-50%);
+			}
+
+			.top-right {
+				transform: translateX(550%);
+				font-size: 25px;
+				transition: ease .5s;
+				margin-top: -10%;
+			}
+
+			.animate-top-right {
+				transform: translateX(-20%);
+			}
+
+			.top-right p {
+				font-weight: 700;
+				font-family: Skia;
+				font-size: 20px;
+				margin: 5px 0;
+			}
+
+			.text-white {
+				color: white;
+				margin-top: 20px !important;
+			}
+
+			.glyphicon-menu-down {
+				font-size: 40px;
+				color: #818181;
+				margin-top: 20px;
+				cursor: pointer;
+			}
+
+			.list-works {
+				margin-top: 100px;
+			}
+
+			.list-li {
+				display: inline-block;
+				margin: 35px;
+			}
+
+			.thumbnail-grid {
+				margin: 4px 0 0 0;
+				padding: 0;
+				list-style: none;
+				display: block;
+				text-align: center;
+				width: 100%;
+			}
+
+			.card {
+				width: 600px;
+				height: 660px;
+				/* background-image: url(img/portfolio-walker-thumbnail.png); */
+				background-size: contain;
+				background-repeat: no-repeat;
+				border-radius: 40px;
+				overflow: hidden;
+				box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.3);
+				margin: auto;
+				position: relative;
+				-webkit-transition: all 500ms;
+				-moz-transition: all 500ms;
+				transition: all 500ms;
+			}
+
+			.card-pants {
+				text-align: left;
+				position: absolute;
+				top: 457px;
+				margin: 0 45px;
+			}
+
+			.card-title {
+				font-family: Skia;
+				font-weight: 900;
+				font-size: 30px;
+				color: #626262;
+				margin-bottom: 18px;
+			}
+
+			.card-subtitle {
+				font-family: Aria;
+				font-size: 18px;
+				color: #919191;
+				margin-bottom: 30px;
+			}
+
+			.card-content {
+				font-family: Aria;
+				font-weight: 200;
+				font-size: 20px;
+				color: #626262;
+				line-height: 23px;
+			}
+
+			@media (min-width: 768px) {
+				body {
+					overflow: hidden;
+				}
+
+				.card:hover {
+					box-shadow: 0px 4px 20px 3px rgba(0, 0, 0, 0.3);
+					transform: translateY(-15px);
+				}
+			}
+
+			@media (max-width: 1400px) {
+				.card {
+					width: 400px;
+					height: 440px;
+					border-radius: 30px;
+				}
+
+				.card-pants {
+					top: 305px;
+					margin: 0 30px;
+				}
+
+				.card-title {
+					font-size: 22px;
+					margin: 0 0 6px 0;
+				}
+
+				.card-content {
+					font-size: 15px;
+				}
+
+				.card-subtitle {
+					font-size: 14px;
+					margin: 0 0 15px 0;
+				}
+			}
+
+			@media (min-width: 1200px) {
+				.top-right>p {
+					font-size: 32px;
+				}
+			}
+
+			@media (max-width: 768px) {
+				body {
+					overflow-x: hidden;
+				}
+
+				.container-adb {
+					width: 100%;
+					position: fixed;
+					bottom: inherit;
+					overflow: initial;
+					height: 120px;
+				}
+
+				.card-pants {
+					top: 238px;
+					margin: 0 25px;
+				}
+
+				.card {
+					width: 320px;
+					height: 350px;
+					border-radius: 25px;
+				}
+
+				.card-title {
+					font-size: 20px;
+				}
+
+				.card-subtitle,
+				.card-content {
+					font-size: 14px;
+				}
+
+				.card-content {
+					line-height: 18px;
+				}
+
+				.card-subtitle {
+					margin-bottom: 12px;
+				}
+
+				.hidden {
+					display: block !important;
+				}
+
+				.list-works {
+					margin-top: 100px;
+					padding: 0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container-fluid container-adb">
+			<div class="top-nav row">
+				<div class="top-nav-background"></div>
+				<div class="col-md-3  col-sm-3 col-xs-6 nav-logo"><img src="img/logo.png" class="img-responsive left-block" width="125px"></div>
+				<div class="col-md-9 col-sm-9 col-xs-9 text-right nav-right">
+					<ul class="list-inline hidden-xs">
+						<li class="active">Project</li>
+						<li>Resume</li>
+						<li><a href="aboutMe.html">About me</a></li>
+					</ul>
+					<div class="dropdown visible-xs">
+						<button class="dropdown-toggle glyphicon glyphicon-menu-hamburger btn btn-default">
+						</button>
+						<ul class="dropdown-menu list-group">
+							<li class="list-group-item"><a href="#">Project</a></li>
+							<li class="list-group-item"><a href="#">Resume</a></li>
+							<li class="list-group-item"><a href="aboutMe.html">About me</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row top hidden-xs">
+				<div class="col-md-9 col-sm-9 col-xs-8 col-md-offset-3 col-sm-offset-3 col-xs-offset-4 top-yellow ">
+					<div class="column col-lg-5 col-md-6 col-xs-5">
+						<img src="img/icon.png" width="20%">
+						<img src="img/top-left.png" width="100%">
+					</div>
+					<div class="top-right col-lg-8 col-md-9 col-xs-7">
+						<img src="img/logo.png" width="125px" />
+						<p class="text-white">Portfolio isn't everthing.</p>
+						<p>Talk to me</p>
+						<p>and learn more about me.</p>
+					</div>
+				</div>
+			</div>
+			<div class="text-center hidden-xs">
+				<!-- <span class="glyphicon glyphicon-menu-down"></span> -->
+				<img src="img/icon-down.png" class="glyphicon-menu-down">
+			</div>
+		</div>
+		<div class="container-fluid hidden list-works">
+			<ul class="thumbnail-grid row">
+				<a href="DLFN.html">
+					<li class="thumbnail-grid-item aos-init list-li aos-animate">
+						<div class="card" style="background-image: url(img/DFLN.png);">
+							<div class="card-pants">
+								<h4 class="card-title">
+									DLFN
+								</h4>
+								<h5 class="card-subtitle">
+									Design Lead  UI/UX Design
+								</h5>
+								<p class="card-content">
+									An user-friendly app that provide instant services for seniors.
+								</p>
+							</div>
+						</div>
+					</li>
+				</a>
+				<a href="youtube.html">
+					<li class="thumbnail-grid-item aos-init list-li aos-animate">
+						<div class="card" style="background-image: url(img/youtube.png);">
+							<div class="card-pants">
+								<h4 class="card-title">
+									Youtube Redesign
+								</h4>
+								<h5 class="card-subtitle">
+									UI/UX Design  UX Research
+								</h5>
+								<p class="card-content">
+									An innovative redesign for Youtube app based on single hand control.
+								</p>
+							</div>
+						</div>
+					</li>
+				</a>
+				<a href="roe.html">
+					<li class="thumbnail-grid-item aos-init list-li aos-animate">
+						<div class="card" style="background-image: url(img/runOf.png);">
+							<div class="card-pants">
+								<h4 class="card-title">
+									Run Of Engagement(ROE)
+								</h4>
+								<h5 class="card-subtitle">
+									Design Lead  UI/UX Design
+								</h5>
+								<p class="card-content">
+									Run of Engagement features.(ticktBox internship project)
+								</p>
+							</div>
+						</div>
+					</li>
+				</a>
+				<a href="vmr.html">
+					<li class="thumbnail-grid-item aos-init list-li aos-animate">
+						<div class="card" style="background-image: url(img/Verified.png);">
+							<div class="card-pants">
+								<h4 class="card-title">
+									Verified Movie Rating (VMR)
+								</h4>
+								<h5 class="card-subtitle">
+									Design Lead  UI/UX Design
+								</h5>
+								<p class="card-content">
+									Verified Movie Rating features.(ticktBox internship project)
+								</p>
+							</div>
+						</div>
+					</li>
+				</a>
+				<a href="wechat.html">
+					<li class="thumbnail-grid-item aos-init list-li aos-animate">
+						<div class="card" style="background-image: url(img/WeChat.png);">
+							<div class="card-pants">
+								<h4 class="card-title">
+									Study Case:WeChat
+								</h4>
+								<h5 class="card-subtitle">
+									Design Lead  UI/UX Design
+								</h5>
+								<p class="card-content">
+									A comprehensive analysis of WeChat's user experience.
+								</p>
+							</div>
+						</div>
+					</li>
+				</a>
+				<a href="DLFN.html">
+					<li class="thumbnail-grid-item aos-init list-li aos-animate">
+						<div class="card" style="background-image: url(img/DFLN.png);">
+							<div class="card-pants">
+								<h4 class="card-title">
+									DLFN
+								</h4>
+								<h5 class="card-subtitle">
+									Design Lead  UI/UX Design
+								</h5>
+								<p class="card-content">
+									An user-friendly app that provide instant services for seniors.
+								</p>
+							</div>
+						</div>
+					</li>
+				</a>
+		</div>
+		<div class="configFoot">
+		</div>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.configFoot').load('footer.html');
+			$('.column').addClass('animate-top-left');
+			$('.top-right').addClass('animate-top-right');
+			$('.glyphicon-menu-down').click(function() {
+				$(this).slideUp();
+				$('.top-nav').css({
+					'height': $('.top-nav').height()
+				})
+				$('.hidden').removeClass('hidden')
+				$('.list-works').css({
+					'marginTop': '100px'
+				})
+				$('.top').slideUp(250, function() {
+					$('.top-nav').addClass('top-nav-aniamte');
+					setTimeout(function() {
+						$('body').css('overflow', 'auto');
+						$('.container-adb').css({
+							'position': 'fixed',
+							'height': 'auto',
+							'bottom': 'inherit'
+						})
+						$('.list-works').css({
+							'marginTop': '220px'
+						})
+					}, 300)
+				})
+				$('.container-adb').addClass('container-relative');
+			})
+			$('.dropdown-toggle').click(function() {
+				if ($('.dropdown-menu').is(':visible')) {
+					$('.dropdown-menu').slideUp(150)
+				} else {
+					$('.dropdown-menu').slideDown(150)
+				}
+			})
+			$(document).off('scroll').scroll(function() {
+				if ($(document).scrollTop() <= 0 && document.body.clientWidth > 768) {
+					$('body').css('overflow', 'hidden');
+					$('.top-nav').removeClass('top-nav-aniamte');
+					$('.container-adb').removeClass('container-relative');
+					$('.container-adb').removeAttr('style')
+					setTimeout(function() {
+						$('.top').slideDown(250, function() {
+							$('.glyphicon-menu-down').slideDown();
+						})
+						$('.list-works').animate({
+							'marginTop': '2000px'
+						}, 250);
+						setTimeout(function() {
+							$('.list-works,.footer-show').addClass('hidden');
+						}, 250)
+					}, 300)
+				}
+			})
+			$(document).off("mousewheel DOMMouseScroll").on("mousewheel DOMMouseScroll", function(e) {
+				var delta = (e.originalEvent.wheelDelta && (e.originalEvent.wheelDelta > 0 ? 1 : -1)) || // chrome & ie
+					(e.originalEvent.detail && (e.originalEvent.detail > 0 ? -1 : 1)); // firefox
+				if (delta < 0) {
+					// 向下滚
+					if ($('.glyphicon-menu-down').is(':visible')) {
+						$('.glyphicon-menu-down').click();
+					}
+				}
+			});
+		})
+	</script>
+</html>

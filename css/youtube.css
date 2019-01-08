@@ -1,0 +1,120 @@
+.overview{
+	margin-top: 50px;
+}
+.overview-content-1 {
+	margin-top: 50px;
+}
+
+.overview-content-1 p {
+	margin-bottom: 40px;
+}
+
+.overview-content-2 {
+	margin-top: 170px;
+}
+.overview-content-3{
+	margin-top: 100px;
+}
+.overview-content-3-bg {
+	margin-top: 10px;
+	padding: 50px 0;
+	background-color: #fafafa;
+	position: absolute;
+	width: 100%;
+	left: 0;
+}
+.container .overview-content-3-bg img{
+	margin-top: 0;
+}
+.problemFinding {
+	margin-top: 120px;
+}
+
+.problemFinding-content-1 {
+	margin-top: 90px;
+}
+
+.problemFinding-content-2 {
+	margin-top: 130px;
+}
+
+.problemFinding-content-3 {
+	margin-top: 170px;
+}
+
+.problemFinding-content-4 {
+	margin-top: 200px;
+}
+
+.design {
+	margin-top: 220px;
+}
+
+.design-content-1 {
+	margin-top: 100px;
+}
+
+.design-content-2 {
+	margin-top: 90px;
+}
+
+.design-content-3 {
+	margin-top: 130px;
+}
+
+.design-content-4 {
+	margin-top: 160px;
+}
+
+.design-content-5 {
+	margin-top: 230px;
+}
+
+.design-content-6 {
+	margin-top: 130px;
+}
+
+.design-content-7 {
+	margin-top: 140px;
+}
+
+.conclusion {
+	margin-top: 200px;
+}
+
+.conclusion-content-1 {
+	margin-top: 70px;
+}
+
+.conclusion-content-1 p:nth-child(2) {
+	margin-top: 60px;
+}
+
+.conclusion-content-2 {
+	margin-top: 160px;
+}
+
+@media (min-width: 768px) {
+	.overview-content-3 {
+		padding-bottom: 500px;
+	}
+}
+@media (min-width: 768px) and (max-width:992px){
+	.container img{
+		width: 90% !important;
+	}
+	.conclusion-content-3 img {
+		width: 60% !important;
+	}
+}
+@media (max-width: 768px) {
+	.conclusion-content-3 img {
+		width: 60% !important;
+	}
+	#overview,
+	#design,
+	#conclusion,
+	#problemFinding {
+		margin-top: 50px;
+	}
+}

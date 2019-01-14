@@ -4,7 +4,7 @@
 }
 .animate{
 	opacity: 0 !important;
-    transform: translate3d(0,50px,0) !important;
+    transform: translate3d(0,50px,0) !important;  
 }
 .scrollTop{
 	position: fixed;
@@ -21,11 +21,11 @@
 }
 .left-nav-list li{
 	list-style: none;
-	font-family: 'Skia';
+	font-family: Skia;
 	cursor: pointer;
 	margin: 10px 0;
 	opacity: 0.5;
-	font-weight: 400;
+	font-weight: 700;
 }
 .left-nav-list li.active{
 	opacity: 1;
@@ -37,7 +37,7 @@
 .container h3 {
 	font-size: 24px;
 	font-weight: 900;
-	font-family: 'Skia';
+	font-family: Skia;
 	margin-bottom: 20px;
 }
 
@@ -56,7 +56,7 @@
 .overview-title {
 	font-size: 34px;
 	font-weight: 900;
-	font-family: 'Skia';
+	font-family: Skia;
 	margin-bottom: 0;
 	text-align: center;
 }

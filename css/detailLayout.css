@@ -42,13 +42,13 @@
 }
 
 .container p {
-	font-size: 18px;
+	font-size: 22px;
 	color: #626262;
-	line-height: 38px;
+	line-height: 60px;
 }
 
 .container p>span {
-	font-weight: 500;
+	font-weight: 600;
 }
 .container img{
 	margin-top: 100px;

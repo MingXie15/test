@@ -20,7 +20,7 @@ a:visited {
 
 .top-nav {
 	width: 100%;
-	height: 100px;
+	height: 80px;
 	background-color: #ffffff;
 	display: flex;
 	align-items: center;
@@ -76,23 +76,23 @@ a:visited {
 }
 
 .top {
-	height: 75%;
+	height: 80%;
 	padding: 0 5%;
 }
 
 .list-inline>li {
-	font-family: Skia;
+	font-family: 'Skia';
 	margin-left: 74px;
 	cursor: pointer;
-	font-weight: 700;
+	font-weight: 500;
 	opacity: 0.6;
 	font-size: 1.6rem;
 	-webkit-font-size: 16px;
 }
 
 .list-group li {
-	font-family: Skia;
-	font-weight: 700;
+	font-family: 'Skia';
+	font-weight: 500;
 	font-size: 16px;
 }
 

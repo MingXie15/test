@@ -78,6 +78,9 @@
 	.reference-content-1 p{
 		text-align: left;
 	}
+	.container .reference-content-2 img{
+		width: 45% !important;
+	}
 	#overview,
 	#userPsychology,
 	#colorChoice,

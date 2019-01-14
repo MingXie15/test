@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<title>首页</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
 		 crossorigin="anonymous">
@@ -37,7 +37,7 @@
 				align-items: center;
 			}
 
-			.column {
+			.top .column {
 				display: flex;
 				flex-direction: column;
 				transition: ease .5s;
@@ -129,20 +129,44 @@
 			}
 
 			.card-subtitle {
-				font-family: Aria;
+				font-family: "Arial";
 				font-size: 18px;
 				color: #919191;
 				margin-bottom: 30px;
 			}
 
 			.card-content {
-				font-family: Aria;
+				font-family: "Arial";
 				font-weight: 200;
 				font-size: 20px;
 				color: #626262;
 				line-height: 23px;
 			}
-
+			.phone{
+				margin: 70px auto 30px auto; 
+				padding: 0 8%;
+			}
+			.phone-top-bg{
+				background-color: #fcca3a;
+				padding: 5% 5% 10% 5%;
+			}
+			.phone-right {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+				margin-top: -70px;
+			}
+			.phone-right>div{
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+			}
+			.phone-left{
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				transform: translateY(-70px);
+			}
 			@media (min-width: 768px) {
 				body {
 					overflow: hidden;
@@ -188,10 +212,6 @@
 			}
 
 			@media (max-width: 768px) {
-				body {
-					overflow-x: hidden;
-				}
-
 				.container-adb {
 					width: 100%;
 					position: fixed;
@@ -199,7 +219,9 @@
 					overflow: initial;
 					height: 120px;
 				}
-
+				.list-li{
+					margin: 35px 0;
+				}
 				.card-pants {
 					top: 238px;
 					margin: 0 25px;
@@ -265,7 +287,7 @@
 				<div class="col-md-9 col-sm-9 col-xs-8 col-md-offset-3 col-sm-offset-3 col-xs-offset-4 top-yellow ">
 					<div class="column col-lg-5 col-md-6 col-xs-5">
 						<img src="img/icon.png" width="20%">
-						<img src="img/top-left.png" width="100%">
+						<img src="img/top-left.png" width="100%" style="height: auto;">
 					</div>
 					<div class="top-right col-lg-8 col-md-9 col-xs-7">
 						<img src="img/logo.png" width="125px" />
@@ -281,6 +303,21 @@
 			</div>
 		</div>
 		<div class="container-fluid hidden list-works">
+			<div class="visible-xs phone">
+				<div class="phone-top-bg">
+				<div class="column phone-left">
+					<img src="img/phone/Sound-wave.png">
+					<img src="img/phone/Hello.png" style="height: auto;">
+				</div>
+				<div class="column phone-right">
+					<div>
+						<img src="img/phone/Ming%20Xie.png">
+						<img src="img/phone/Port.png" style="margin-top:10px;height: auto;">
+					</div>
+				</div>
+				</div>
+				<!-- <img src="img/iPhone%20X-XS%20–%201.png" style="width: 100% !important"> -->
+			</div>
 			<ul class="thumbnail-grid row">
 				<a href="DLFN.html">
 					<li class="thumbnail-grid-item aos-init list-li aos-animate">
@@ -338,7 +375,7 @@
 						<div class="card" style="background-image: url(img/Verified.png);">
 							<div class="card-pants">
 								<h4 class="card-title">
-									Verified Movie Rating (VMR)
+									Verified Movie Rating 
 								</h4>
 								<h5 class="card-subtitle">
 									Design Lead  UI/UX Design
@@ -392,7 +429,7 @@
 	<script>
 		$(document).ready(function() {
 			$('.configFoot').load('footer.html');
-			$('.column').addClass('animate-top-left');
+			$('.top .column').addClass('animate-top-left');
 			$('.top-right').addClass('animate-top-right');
 			$('.glyphicon-menu-down').click(function() {
 				$(this).slideUp();
@@ -443,6 +480,11 @@
 							$('.list-works,.footer-show').addClass('hidden');
 						}, 250)
 					}, 300)
+				}
+				if($(document).scrollTop() <= 0 && document.body.clientWidth < 768){
+					$('.top-nav').removeClass('top-nav-aniamte');
+				}else if($(document).scrollTop() > 0 && document.body.clientWidth < 768){
+					$('.top-nav').addClass('top-nav-aniamte');
 				}
 			})
 			$(document).off("mousewheel DOMMouseScroll").on("mousewheel DOMMouseScroll", function(e) {

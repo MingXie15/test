@@ -175,9 +175,14 @@ iframe {
 		width: 90%;
 		height: 200px
 	}
-
+	.container .myTakeaway-content-2 img{
+		width: 45% !important;
+	}
+	.container .overview-content-1-right img{
+		width: 60% !important;
+	}
 	.overview-content-1-right p {
-		width: 90%;
+		width: 100%;
 	}
 
 	.overview-content-4 {
